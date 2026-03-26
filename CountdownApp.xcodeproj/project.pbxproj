@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CEFCFCB1B73C436E928BBCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FF3EB82ED82DE4B9EDDD10 /* ContentView.swift */; };
+		15CF3CC57103B2394B89D2AC /* EventRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7B2B7B5B6FCF3AD690FDE /* EventRowView.swift */; };
+		1EE1478E8DAB71FD768D32FF /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50F347E32E8DBEA2E4386F3 /* NotificationService.swift */; };
+		3F94695AAA3DDF290F449048 /* CountdownAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD60AB3E1CC2D607E7EB3C /* CountdownAttributes.swift */; };
+		403E89827DF9BB03E9042CE6 /* EventTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A5D8EEB73D1DF20EEA260 /* EventTimelineProvider.swift */; };
+		52D6D4767CF3555A75BF9FBB /* CountdownEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C25D64076057EC6376E2339 /* CountdownEvent.swift */; };
+		576E07BEA49D2695C7164F26 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41EAB06DC8663919D7A0356 /* SettingsView.swift */; };
+		64C57A333C0EE6F53C572E9B /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264888BDE311130B888D0F10 /* Color+Hex.swift */; };
+		69985E5A44BD3557DF7FEB53 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264888BDE311130B888D0F10 /* Color+Hex.swift */; };
+		6E867A2992A1E572BBE9DF97 /* EventWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF848CBC4784C2D440F231 /* EventWidgetView.swift */; };
+		9B68E04347BF7410B15B9923 /* CountdownAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD60AB3E1CC2D607E7EB3C /* CountdownAttributes.swift */; };
+		A9BD03F2017A9F03B9A57DD4 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF1ACFE554B1823DB9240E /* EventListView.swift */; };
+		ABA843265732969373D17434 /* CountdownLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F361C6BDBCC317AAC2A4F8 /* CountdownLiveActivity.swift */; };
+		AD48B139006630FFC759A03B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA77B405A24B691B95B3F218 /* Assets.xcassets */; };
+		C1C975C2C4F8E46BA5CBD3B5 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A0923B8DA54E3A49451F3 /* LiveActivityManager.swift */; };
+		C51F016C201F2628F3D24618 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828C83FD147C55605F17A4B4 /* CountdownApp.swift */; };
+		E3AE7ACBA245D3C43509AE1C /* CountdownEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C25D64076057EC6376E2339 /* CountdownEvent.swift */; };
+		E42395DADB39533077045176 /* CountdownWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B833B9ADE497EE1E29D6A0 /* CountdownWidgetBundle.swift */; };
+		E8D50ECDE5C82F7B567F88F9 /* AddEditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3C7267083864D3F23636CD /* AddEditEventView.swift */; };
+		E9940E78821EF1A5D2FBA4FC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC8C0DC9B70D660D57A38D1 /* Theme.swift */; };
+		F78080603B9C0E6DA126C06E /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60180DBA45A4E0703BF7C7CC /* EventStore.swift */; };
+		FAC4F54CEBBEB17B295CAF16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867707DDEF37555D88472B49 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20F361C6BDBCC317AAC2A4F8 /* CountdownLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownLiveActivity.swift; sourceTree = "<group>"; };
+		264888BDE311130B888D0F10 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		2BE7B2B7B5B6FCF3AD690FDE /* EventRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowView.swift; sourceTree = "<group>"; };
+		2C25D64076057EC6376E2339 /* CountdownEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownEvent.swift; sourceTree = "<group>"; };
+		34B833B9ADE497EE1E29D6A0 /* CountdownWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownWidgetBundle.swift; sourceTree = "<group>"; };
+		413A0923B8DA54E3A49451F3 /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
+		46FF1ACFE554B1823DB9240E /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		4711224B8E0778DCAB240989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		60180DBA45A4E0703BF7C7CC /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
+		66DF848CBC4784C2D440F231 /* EventWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWidgetView.swift; sourceTree = "<group>"; };
+		79F8171F90B8BF6694832B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7A3C7267083864D3F23636CD /* AddEditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditEventView.swift; sourceTree = "<group>"; };
+		8165992EF55EC05C6F72D88D /* CountdownApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CountdownApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		828C83FD147C55605F17A4B4 /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
+		867707DDEF37555D88472B49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B7A5D8EEB73D1DF20EEA260 /* EventTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTimelineProvider.swift; sourceTree = "<group>"; };
+		90319947E362BD38BCA38924 /* CountdownWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CountdownWidget.entitlements; sourceTree = "<group>"; };
+		9EFD60AB3E1CC2D607E7EB3C /* CountdownAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownAttributes.swift; sourceTree = "<group>"; };
+		BA77B405A24B691B95B3F218 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C50F347E32E8DBEA2E4386F3 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		D41EAB06DC8663919D7A0356 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E1232734CFA6F119E97A0FE1 /* CountdownWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = CountdownWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3739665029E822D482C85D5 /* CountdownApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CountdownApp.entitlements; sourceTree = "<group>"; };
+		ECC8C0DC9B70D660D57A38D1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		F7FF3EB82ED82DE4B9EDDD10 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		00EB419BB41BC80A954BCF1A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ECC8C0DC9B70D660D57A38D1 /* Theme.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		12E586BD972EBEFF0EC99660 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A3C7267083864D3F23636CD /* AddEditEventView.swift */,
+				F7FF3EB82ED82DE4B9EDDD10 /* ContentView.swift */,
+				46FF1ACFE554B1823DB9240E /* EventListView.swift */,
+				2BE7B2B7B5B6FCF3AD690FDE /* EventRowView.swift */,
+				D41EAB06DC8663919D7A0356 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		617FF5B66DC6E0F2C11C0670 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				60180DBA45A4E0703BF7C7CC /* EventStore.swift */,
+				413A0923B8DA54E3A49451F3 /* LiveActivityManager.swift */,
+				C50F347E32E8DBEA2E4386F3 /* NotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9F323C09ADE5964A069D7C31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8165992EF55EC05C6F72D88D /* CountdownApp.app */,
+				E1232734CFA6F119E97A0FE1 /* CountdownWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE5664ADD87C450C41EE294C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				264888BDE311130B888D0F10 /* Color+Hex.swift */,
+				9EFD60AB3E1CC2D607E7EB3C /* CountdownAttributes.swift */,
+				2C25D64076057EC6376E2339 /* CountdownEvent.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D30C0DB01ECBE20816394CE0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				828C83FD147C55605F17A4B4 /* CountdownApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D498EEB69F749A50D6A95BAB = {
+			isa = PBXGroup;
+			children = (
+				EBA3AEFB1316310E94118B77 /* CountdownApp */,
+				E4AC0ABE2C61A4A8818045C8 /* CountdownWidget */,
+				CE5664ADD87C450C41EE294C /* Shared */,
+				9F323C09ADE5964A069D7C31 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E4AC0ABE2C61A4A8818045C8 /* CountdownWidget */ = {
+			isa = PBXGroup;
+			children = (
+				867707DDEF37555D88472B49 /* Assets.xcassets */,
+				20F361C6BDBCC317AAC2A4F8 /* CountdownLiveActivity.swift */,
+				90319947E362BD38BCA38924 /* CountdownWidget.entitlements */,
+				34B833B9ADE497EE1E29D6A0 /* CountdownWidgetBundle.swift */,
+				8B7A5D8EEB73D1DF20EEA260 /* EventTimelineProvider.swift */,
+				66DF848CBC4784C2D440F231 /* EventWidgetView.swift */,
+				4711224B8E0778DCAB240989 /* Info.plist */,
+			);
+			path = CountdownWidget;
+			sourceTree = "<group>";
+		};
+		EBA3AEFB1316310E94118B77 /* CountdownApp */ = {
+			isa = PBXGroup;
+			children = (
+				D30C0DB01ECBE20816394CE0 /* App */,
+				00EB419BB41BC80A954BCF1A /* Extensions */,
+				617FF5B66DC6E0F2C11C0670 /* Services */,
+				12E586BD972EBEFF0EC99660 /* Views */,
+				BA77B405A24B691B95B3F218 /* Assets.xcassets */,
+				E3739665029E822D482C85D5 /* CountdownApp.entitlements */,
+				79F8171F90B8BF6694832B63 /* Info.plist */,
+			);
+			path = CountdownApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91D878CC03653AA831762768 /* CountdownWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEA09822927ADFBD3573F838 /* Build configuration list for PBXNativeTarget "CountdownWidget" */;
+			buildPhases = (
+				110C63F8FF596059DF4E7500 /* Sources */,
+				A98BF0C5F768B0CD8507A099 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CountdownWidget;
+			packageProductDependencies = (
+			);
+			productName = CountdownWidget;
+			productReference = E1232734CFA6F119E97A0FE1 /* CountdownWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B9AD06B28ACB8225F1644464 /* CountdownApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6C8857F5ED2106B14C2ADF9 /* Build configuration list for PBXNativeTarget "CountdownApp" */;
+			buildPhases = (
+				7F716F8A8805C9E1AC3EE62D /* Sources */,
+				F40803BD0744EE20665F54CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CountdownApp;
+			packageProductDependencies = (
+			);
+			productName = CountdownApp;
+			productReference = 8165992EF55EC05C6F72D88D /* CountdownApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61B2419A126B5F334885B689 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					B9AD06B28ACB8225F1644464 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = E66CE5BD77DAB8EC4224EA78 /* Build configuration list for PBXProject "CountdownApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D498EEB69F749A50D6A95BAB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9F323C09ADE5964A069D7C31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9AD06B28ACB8225F1644464 /* CountdownApp */,
+				91D878CC03653AA831762768 /* CountdownWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A98BF0C5F768B0CD8507A099 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC4F54CEBBEB17B295CAF16 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F40803BD0744EE20665F54CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD48B139006630FFC759A03B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		110C63F8FF596059DF4E7500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69985E5A44BD3557DF7FEB53 /* Color+Hex.swift in Sources */,
+				3F94695AAA3DDF290F449048 /* CountdownAttributes.swift in Sources */,
+				52D6D4767CF3555A75BF9FBB /* CountdownEvent.swift in Sources */,
+				ABA843265732969373D17434 /* CountdownLiveActivity.swift in Sources */,
+				E42395DADB39533077045176 /* CountdownWidgetBundle.swift in Sources */,
+				403E89827DF9BB03E9042CE6 /* EventTimelineProvider.swift in Sources */,
+				6E867A2992A1E572BBE9DF97 /* EventWidgetView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F716F8A8805C9E1AC3EE62D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8D50ECDE5C82F7B567F88F9 /* AddEditEventView.swift in Sources */,
+				64C57A333C0EE6F53C572E9B /* Color+Hex.swift in Sources */,
+				0CEFCFCB1B73C436E928BBCB /* ContentView.swift in Sources */,
+				C51F016C201F2628F3D24618 /* CountdownApp.swift in Sources */,
+				9B68E04347BF7410B15B9923 /* CountdownAttributes.swift in Sources */,
+				E3AE7ACBA245D3C43509AE1C /* CountdownEvent.swift in Sources */,
+				A9BD03F2017A9F03B9A57DD4 /* EventListView.swift in Sources */,
+				15CF3CC57103B2394B89D2AC /* EventRowView.swift in Sources */,
+				F78080603B9C0E6DA126C06E /* EventStore.swift in Sources */,
+				C1C975C2C4F8E46BA5CBD3B5 /* LiveActivityManager.swift in Sources */,
+				1EE1478E8DAB71FD768D32FF /* NotificationService.swift in Sources */,
+				576E07BEA49D2695C7164F26 /* SettingsView.swift in Sources */,
+				E9940E78821EF1A5D2FBA4FC /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0B76EE30B808541DED15B32F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		732729AB1CF4A99944F304F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		873FF71B798D914B5D8599F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CountdownApp/CountdownApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CountdownApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.openclaw.countdown;
+				SDKROOT = iphoneos;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B956E9954A7D9A78E0BB9BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CountdownWidget/CountdownWidget.entitlements;
+				EXTENSIONKIT_ONLY = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CountdownWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.openclaw.countdown.widget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C4F54CF5434424E8F04FD49B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CountdownApp/CountdownApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CountdownApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.openclaw.countdown;
+				SDKROOT = iphoneos;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F543274385392594E434D2D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CountdownWidget/CountdownWidget.entitlements;
+				EXTENSIONKIT_ONLY = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CountdownWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.openclaw.countdown.widget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEA09822927ADFBD3573F838 /* Build configuration list for PBXNativeTarget "CountdownWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F543274385392594E434D2D9 /* Debug */,
+				B956E9954A7D9A78E0BB9BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E66CE5BD77DAB8EC4224EA78 /* Build configuration list for PBXProject "CountdownApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				732729AB1CF4A99944F304F4 /* Debug */,
+				0B76EE30B808541DED15B32F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E6C8857F5ED2106B14C2ADF9 /* Build configuration list for PBXNativeTarget "CountdownApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				873FF71B798D914B5D8599F5 /* Debug */,
+				C4F54CF5434424E8F04FD49B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61B2419A126B5F334885B689 /* Project object */;
+}

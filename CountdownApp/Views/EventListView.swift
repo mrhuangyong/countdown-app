@@ -34,7 +34,7 @@ struct EventListView: View {
                     .ignoresSafeArea()
 
                 ScrollView {
-                    VStack(spacing: 24) {
+                    LazyVStack(spacing: 24) {
                         // Pinned section
                         if !pinnedEvents.isEmpty {
                             sectionHeader("📌 已置顶", count: pinnedEvents.count)
@@ -52,6 +52,9 @@ struct EventListView: View {
                                     .onTapGesture { editingEvent = event }
                             }
                         }
+
+                        // Chinese holidays
+                        holidaySection
 
                         // Past section
                         if !pastEvents.isEmpty {
@@ -124,5 +127,71 @@ struct EventListView: View {
             Spacer(minLength: 80)
         }
         .frame(maxWidth: .infinity)
+    }
+
+    // MARK: - Holiday Section
+
+    private var upcomingHolidays: [ChineseHoliday] {
+        ChineseHoliday.upcomingHolidays(limit: 5)
+    }
+
+    @ViewBuilder
+    private var holidaySection: some View {
+        if !upcomingHolidays.isEmpty {
+            sectionHeader("🇨🇳 法定节假日", count: upcomingHolidays.count)
+            ForEach(upcomingHolidays, id: \.name) { holiday in
+                holidayRow(holiday)
+            }
+        }
+    }
+
+    private func holidayRow(_ holiday: ChineseHoliday) -> some View {
+        let days = Calendar.current.dateComponents([.day], from: Calendar.current.startOfDay(for: Date()), to: Calendar.current.startOfDay(for: holiday.date)).day ?? 0
+
+        return HStack(spacing: 16) {
+            ZStack {
+                Circle()
+                    .fill(Color.holidayColor.opacity(0.15))
+                    .frame(width: 52, height: 52)
+                Text(holiday.emoji)
+                    .font(.system(size: 24))
+            }
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text(holiday.name)
+                    .font(.body)
+                    .fontWeight(.medium)
+                let formatter = DateFormatter()
+                Text(holiday.formattedDate)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
+            Spacer()
+
+            VStack(alignment: .trailing, spacing: 2) {
+                Text("\(days)")
+                    .font(.system(size: 28, weight: .bold, design: .rounded))
+                    .foregroundStyle(days < 0 ? Color.secondary : Color.holidayColor)
+                Text(days < 0 ? "天前" : "天")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(.background)
+                .shadow(color: .black.opacity(0.04), radius: 8, x: 0, y: 2)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(Color.holidayColor.opacity(0.2), lineWidth: 1)
+        )
+        .contentShape(Rectangle())
+        .onTapGesture {
+            let event = holiday.toCountdownEvent()
+            eventStore.add(event)
+        }
     }
 }

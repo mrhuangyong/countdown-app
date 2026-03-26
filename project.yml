@@ -23,7 +23,7 @@ targets:
       - path: Shared
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.openclaw.countdown
+        PRODUCT_BUNDLE_IDENTIFIER: com.mrhuangyong.countdown
         INFOPLIST_FILE: CountdownApp/Info.plist
         GENERATE_INFOPLIST_FILE: false
         SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: false
@@ -64,7 +64,7 @@ targets:
       - path: Shared
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.openclaw.countdown.widget
+        PRODUCT_BUNDLE_IDENTIFIER: com.mrhuangyong.countdown.widget
         INFOPLIST_FILE: CountdownWidget/Info.plist
         GENERATE_INFOPLIST_FILE: false
         CODE_SIGN_ENTITLEMENTS: CountdownWidget/CountdownWidget.entitlements

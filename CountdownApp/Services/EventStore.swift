@@ -78,45 +78,7 @@ final class EventStore {
     private func load() {
         guard let defaults,
               let data = defaults.data(forKey: AppConstants.eventsKey)
-        else {
-            loadSampleEvents()
-            return
-        }
+        else { return }
         events = (try? JSONDecoder().decode([CountdownEvent].self, from: data)) ?? []
-        if events.isEmpty {
-            loadSampleEvents()
-        }
-    }
-
-    private func loadSampleEvents() {
-        let calendar = Calendar.current
-        let now = Date()
-        var components = DateComponents()
-
-        // 新年倒计时
-        components.year = 2027; components.month = 1; components.day = 1
-        let newYear = calendar.date(from: components) ?? now
-
-        // 春节
-        components.year = 2027; components.month = 2; components.day = 6
-        let springFestival = calendar.date(from: components) ?? now
-
-        // 7天后
-        let in7Days = calendar.date(byAdding: .day, value: 7, to: now)!
-
-        // 30天后
-        let in30Days = calendar.date(byAdding: .day, value: 30, to: now)!
-
-        // 3个月前
-        let ago90Days = calendar.date(byAdding: .day, value: -90, to: now)!
-
-        events = [
-            CountdownEvent(name: "2027 新年", date: newYear, category: .holiday, isPinned: true),
-            CountdownEvent(name: "春节", date: springFestival, category: .holiday, isPinned: true),
-            CountdownEvent(name: "周末旅行", date: in7Days, category: .travel),
-            CountdownEvent(name: "项目交付", date: in30Days, category: .work),
-            CountdownEvent(name: "朋友生日", date: ago90Days, category: .birthday),
-        ]
-        save()
     }
 }

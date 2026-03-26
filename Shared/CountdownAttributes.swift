@@ -28,8 +28,8 @@ struct CountdownAttributes: ActivityAttributes {
 // MARK: - App Group Constants
 
 enum AppConstants {
-    static let appGroupId = "group.com.openclaw.countdown"
-    static let suiteName = "group.com.openclaw.countdown"
+    static let appGroupId = "group.com.mrhuangyong.countdown"
+    static let suiteName = "group.com.mrhuangyong.countdown"
     static let eventsKey = "countdown_events"
     static let liveActivityToggleKey = "live_activity_enabled"
 }

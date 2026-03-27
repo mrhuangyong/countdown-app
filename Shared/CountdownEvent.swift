@@ -50,6 +50,11 @@ enum EventCategory: String, Codable, CaseIterable, Identifiable {
     }
 }
 
+enum EventSourceType: String, Codable, CaseIterable {
+    case local
+    case systemCalendar
+}
+
 // MARK: - Countdown Event
 
 struct CountdownEvent: Identifiable, Codable, Equatable, Hashable {
@@ -60,6 +65,10 @@ struct CountdownEvent: Identifiable, Codable, Equatable, Hashable {
     var isPinned: Bool
     var createdAt: Date
     var remindDaysBefore: Int
+    var sourceType: EventSourceType
+    var externalCalendarId: String?
+    var externalEventId: String?
+    var externalLastModifiedDate: Date?
 
     var daysRemaining: Int {
         Calendar.current.dateComponents([.day], from: Calendar.current.startOfDay(for: Date()), to: Calendar.current.startOfDay(for: date)).day ?? 0
@@ -99,7 +108,11 @@ struct CountdownEvent: Identifiable, Codable, Equatable, Hashable {
         category: EventCategory = .custom,
         isPinned: Bool = false,
         createdAt: Date = Date(),
-        remindDaysBefore: Int = 0
+        remindDaysBefore: Int = 0,
+        sourceType: EventSourceType = .local,
+        externalCalendarId: String? = nil,
+        externalEventId: String? = nil,
+        externalLastModifiedDate: Date? = nil
     ) {
         self.id = id
         self.name = name
@@ -108,5 +121,9 @@ struct CountdownEvent: Identifiable, Codable, Equatable, Hashable {
         self.isPinned = isPinned
         self.createdAt = createdAt
         self.remindDaysBefore = remindDaysBefore
+        self.sourceType = sourceType
+        self.externalCalendarId = externalCalendarId
+        self.externalEventId = externalEventId
+        self.externalLastModifiedDate = externalLastModifiedDate
     }
 }

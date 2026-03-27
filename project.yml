@@ -55,6 +55,7 @@ targets:
           - "CountdownIntent"
         BGTaskSchedulerPermittedIdentifiers: []
         NSSupportsLiveActivities: true
+        NSCalendarsUsageDescription: 用于读取系统日历事件并导入为倒计时。
 
   CountdownWidget:
     type: app-extension

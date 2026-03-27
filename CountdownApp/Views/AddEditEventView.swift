@@ -15,6 +15,8 @@ struct AddEditEventView: View {
     @State private var category: EventCategory = .custom
     @State private var remindDaysBefore: Int = 0
     @State private var enableReminder = false
+    @State private var showingCalendarImport = false
+    @State private var importedCount = 0
 
     private var isEditing: Bool {
         if case .edit = mode { return true }
@@ -91,6 +93,22 @@ struct AddEditEventView: View {
                             Text("将在事件前 \(remindDaysBefore) 天发送通知提醒")
                         }
                     }
+
+                    Section {
+                        Button {
+                            showingCalendarImport = true
+                        } label: {
+                            Label("从系统日历导入", systemImage: "calendar.badge.plus")
+                        }
+                    } header: {
+                        Text("日历")
+                    } footer: {
+                        if importedCount > 0 {
+                            Text("刚刚已导入 \(importedCount) 个事件")
+                        } else {
+                            Text("支持批量导入未来 1 年内的系统日历事件")
+                        }
+                    }
                 }
             }
             .navigationTitle(isEditing ? "编辑事件" : "添加事件")
@@ -114,6 +132,15 @@ struct AddEditEventView: View {
                     category = event.category
                     remindDaysBefore = event.remindDaysBefore
                     enableReminder = event.remindDaysBefore > 0
+                }
+            }
+            .sheet(isPresented: $showingCalendarImport) {
+                CalendarImportSheet { importedEvents in
+                    eventStore.importEvents(importedEvents)
+                    importedCount = importedEvents.count
+                    for event in importedEvents where event.remindDaysBefore > 0 {
+                        NotificationService.shared.scheduleReminder(for: event)
+                    }
                 }
             }
         }
@@ -145,6 +172,97 @@ struct AddEditEventView: View {
         }
 
         dismiss()
+    }
+}
+
+struct CalendarImportSheet: View {
+    @Environment(CalendarService.self) private var calendarService
+    @Environment(\.dismiss) private var dismiss
+
+    @State private var events: [CalendarImportItem] = []
+    @State private var selectedIds = Set<String>()
+    @State private var searchText = ""
+    @State private var isLoading = false
+    @State private var didDenyAccess = false
+
+    let onImport: ([CountdownEvent]) -> Void
+
+    private var filteredEvents: [CalendarImportItem] {
+        guard !searchText.isEmpty else { return events }
+        return events.filter { item in
+            item.title.localizedCaseInsensitiveContains(searchText) ||
+            item.calendarTitle.localizedCaseInsensitiveContains(searchText)
+        }
+    }
+
+    var body: some View {
+        NavigationStack {
+            Group {
+                if didDenyAccess {
+                    ContentUnavailableView("未获得日历权限", systemImage: "calendar.badge.exclamationmark", description: Text("请在系统设置中开启日历权限后重试"))
+                } else if isLoading {
+                    ProgressView("正在读取系统日历…")
+                } else if filteredEvents.isEmpty {
+                    ContentUnavailableView("暂无可导入事件", systemImage: "calendar")
+                } else {
+                    List(filteredEvents, id: \.id) { item in
+                        Button {
+                            toggleSelection(for: item.id)
+                        } label: {
+                            HStack(spacing: 12) {
+                                Image(systemName: selectedIds.contains(item.id) ? "checkmark.circle.fill" : "circle")
+                                    .foregroundStyle(selectedIds.contains(item.id) ? .accent : .secondary)
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(item.title)
+                                        .font(.body)
+                                        .multilineTextAlignment(.leading)
+                                    Text("\(item.calendarTitle) · \(item.startDate.formatted(date: .abbreviated, time: .omitted))")
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
+                                Spacer(minLength: 0)
+                            }
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+            }
+            .navigationTitle("导入系统日历")
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("取消") { dismiss() }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("导入") {
+                        let selected = events.filter { selectedIds.contains($0.id) }
+                        let mapped = selected.map { $0.toCountdownEvent() }
+                        onImport(mapped)
+                        dismiss()
+                    }
+                    .disabled(selectedIds.isEmpty)
+                }
+            }
+            .searchable(text: $searchText, prompt: "搜索日历事件")
+            .task {
+                await loadEvents()
+            }
+        }
+    }
+
+    private func loadEvents() async {
+        isLoading = true
+        let loaded = await calendarService.fetchUpcomingEvents(days: 365)
+        didDenyAccess = loaded.isEmpty && calendarService.accessState == .denied
+        events = loaded
+        isLoading = false
+    }
+
+    private func toggleSelection(for id: String) {
+        if selectedIds.contains(id) {
+            selectedIds.remove(id)
+        } else {
+            selectedIds.insert(id)
+        }
     }
 }
 

@@ -30,6 +30,16 @@ struct EventRowView: View {
                 Text(event.formattedDate)
                     .font(.caption)
                     .foregroundStyle(.secondary)
+
+                if event.sourceType == .systemCalendar {
+                    Text("系统日历")
+                        .font(.caption2)
+                        .padding(.horizontal, 6)
+                        .padding(.vertical, 2)
+                        .background(Color.blue.opacity(0.12))
+                        .foregroundStyle(.blue)
+                        .clipShape(Capsule())
+                }
             }
 
             Spacer()

@@ -3,6 +3,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(EventStore.self) private var eventStore
+    @Environment(CalendarService.self) private var calendarService
     @AppStorage("sortOrder") private var sortOrder: SortOrder = .date
     @AppStorage("showPastEvents") private var showPastEvents = true
 
@@ -53,6 +54,25 @@ struct SettingsView: View {
                         Text("在系统设置中管理通知权限")
                     }
 
+                    Section {
+                        HStack {
+                            Text("权限状态")
+                            Spacer()
+                            Text(calendarPermissionStatus)
+                                .foregroundStyle(.secondary)
+                        }
+
+                        Button("打开日历权限设置") {
+                            if let url = URL(string: UIApplication.openSettingsURLString) {
+                                UIApplication.shared.open(url)
+                            }
+                        }
+                    } header: {
+                        Text("日历")
+                    } footer: {
+                        Text("用于从系统日历导入事件")
+                    }
+
                     // Data
                     Section {
                         Button("清除所有事件", role: .destructive) {
@@ -74,6 +94,20 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle("设置")
+            .onAppear {
+                calendarService.refreshAuthorizationStatus()
+            }
+        }
+    }
+
+    private var calendarPermissionStatus: String {
+        switch calendarService.accessState {
+        case .unknown:
+            return "未授权"
+        case .granted:
+            return "已授权"
+        case .denied:
+            return "已拒绝"
         }
     }
 

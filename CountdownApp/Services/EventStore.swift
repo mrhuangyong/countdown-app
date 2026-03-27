@@ -28,6 +28,18 @@ final class EventStore {
         events.append(event)
     }
 
+    func importEvents(_ importedEvents: [CountdownEvent]) {
+        guard !importedEvents.isEmpty else { return }
+        for event in importedEvents {
+            if let externalEventId = event.externalEventId {
+                if events.contains(where: { $0.externalEventId == externalEventId }) {
+                    continue
+                }
+            }
+            events.append(event)
+        }
+    }
+
     func update(_ event: CountdownEvent) {
         if let index = events.firstIndex(where: { $0.id == event.id }) {
             events[index] = event

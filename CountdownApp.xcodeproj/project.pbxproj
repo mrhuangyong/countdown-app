@@ -10,6 +10,7 @@
 		0CEFCFCB1B73C436E928BBCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FF3EB82ED82DE4B9EDDD10 /* ContentView.swift */; };
 		15CF3CC57103B2394B89D2AC /* EventRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7B2B7B5B6FCF3AD690FDE /* EventRowView.swift */; };
 		1EE1478E8DAB71FD768D32FF /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50F347E32E8DBEA2E4386F3 /* NotificationService.swift */; };
+		2AA1869D93D44B40A0F76A11 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771639A709374528A8E72E65 /* CalendarService.swift */; };
 		3F94695AAA3DDF290F449048 /* CountdownAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD60AB3E1CC2D607E7EB3C /* CountdownAttributes.swift */; };
 		403E89827DF9BB03E9042CE6 /* EventTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A5D8EEB73D1DF20EEA260 /* EventTimelineProvider.swift */; };
 		52D6D4767CF3555A75BF9FBB /* CountdownEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C25D64076057EC6376E2339 /* CountdownEvent.swift */; };
@@ -41,6 +42,7 @@
 		34B833B9ADE497EE1E29D6A0 /* CountdownWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownWidgetBundle.swift; sourceTree = "<group>"; };
 		413A0923B8DA54E3A49451F3 /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
 		46FF1ACFE554B1823DB9240E /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		771639A709374528A8E72E65 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		4711224B8E0778DCAB240989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		60180DBA45A4E0703BF7C7CC /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
 		613E8862940BB6BF530F902B /* ChineseHoliday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseHoliday.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		617FF5B66DC6E0F2C11C0670 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				771639A709374528A8E72E65 /* CalendarService.swift */,
 				60180DBA45A4E0703BF7C7CC /* EventStore.swift */,
 				413A0923B8DA54E3A49451F3 /* LiveActivityManager.swift */,
 				C50F347E32E8DBEA2E4386F3 /* NotificationService.swift */,
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D50ECDE5C82F7B567F88F9 /* AddEditEventView.swift in Sources */,
+				2AA1869D93D44B40A0F76A11 /* CalendarService.swift in Sources */,
 				DAA47B7A943B6CB79B2ED1CB /* ChineseHoliday.swift in Sources */,
 				64C57A333C0EE6F53C572E9B /* Color+Hex.swift in Sources */,
 				0CEFCFCB1B73C436E928BBCB /* ContentView.swift in Sources */,
